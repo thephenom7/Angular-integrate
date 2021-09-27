@@ -21,5 +21,7 @@ export class DataService {
   updateBooks(data:any,id :number): Observable<any[]>{
     return this.http.put<any>('http://localhost:49952/api/book/'+id,data)
   }
-
+  getBooksById(id:number): Observable<any[]>{
+    return this.http.get<any>('http://localhost:49952/api/book/'+id)
+  }
 }

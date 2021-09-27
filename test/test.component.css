@@ -2,5 +2,25 @@ hr {
     border-top: 3px solid green;
   }
  #bt{
-     margin: 5px 15px;
+     margin: 5px 5px;
  }
+
+ .jumbotron {
+    background-image:url('https://images.pexels.com/photos/415071/pexels-photo-415071.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    height:450px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+    border-bottom:1px solid #ff6a00;
+    margin-bottom: 2px;
+  }
+  .jumbotron .container {
+    position:relative;
+    top:50px;
+  }
+  #bookspage{
+      background-color:rgb(210, 212, 198);
+      margin-top: 0px;
+  }
+  .card-title{
+      padding-left: 8px;
+  }

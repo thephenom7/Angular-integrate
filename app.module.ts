@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { TestComponent } from './test/test.component';
 import { EditComponent } from './edit/edit.component';
+import { ViewComponent } from './view/view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BookComponent,
     TestComponent,
-    EditComponent
+    EditComponent,
+    ViewComponent
   ],
   imports: [
     BrowserModule,

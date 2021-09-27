@@ -1,7 +1,34 @@
-<div class="container">
+<div class="jumbotron">
+  <div class="container">
+      <h3>The man who does not read good books is no better <br>than the man who can’t</h3>
+      <p> <i>- Margaret Fuller</i>
+
+      </p>
+  </div>
+</div>
+
+
+<div id="bookspage">
+<div class="container" >
     <h1>All Books</h1>
   
-  <table class="table table-bordered">
+
+
+    <div class="row">
+      <div class="col-sm-3" *ngFor="let book of books">
+        <div class="card">
+            <img src="https://pbs.twimg.com/profile_images/1181583065811996673/ylZLdBGL_400x400.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ book.Title }}</h5>
+            <button  class="btn btn-primary btn-block" id="bt" (click)="onButtonClickView(book)">View</button>
+            <button class="btn btn-warning btn-block" id="bt" (click)="onButtonClickEdit(book)">Edit</button> 
+            <button class="btn btn-danger btn-block" id="bt"(click)="onButtonClick(book)">Delete</button> 
+
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--<table class="table table-bordered">
       <thead class="thead-dark">
           <tr>
               <th>Id</th>
@@ -23,17 +50,18 @@
               </td>
           </tr>
       </tbody>
-  </table>
+  </table>-->
 
   <br>
   <hr><br>
 
 
-
+  <h3>Add New Book</h3>
+  <br>
   <form #loginForm="ngForm" (submit)="onSubmit(loginForm.value)">
               
     <div class="form-group">
-      <label for="Title">Title</label>
+      <label for="Title"><b>Title</b></label>
       <input
         type="text"
         id="Title"
@@ -45,7 +73,7 @@
 
     </div>
     <div class="form-group">
-        <label for="Author">Author</label>
+        <label for="Author"><b>Author</b></label>
         <input
           type="text"
           id="Author"
@@ -56,7 +84,7 @@
         />
   
       </div>    <div class="form-group">
-        <label for="Price">Price</label>
+        <label for="Price"><b>Price</b></label>
         <input
           type="text"
           id="Price"
@@ -73,12 +101,13 @@
     <input
       type="submit"
       value="Add Book"
-      class="btn btn-info"
+      class="btn btn-info btn-block"
     />
   </form>
 
   
-  
+  <br><br>
   
   </div>
+</div>
   
