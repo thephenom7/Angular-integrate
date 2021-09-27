@@ -1,0 +1,84 @@
+<div class="container">
+    <h1>All Books</h1>
+  
+  <table class="table table-bordered">
+      <thead class="thead-dark">
+          <tr>
+              <th>Id</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Price</th>
+              <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let book of books">
+              <td>{{ book.Id }}</td>
+              <td>{{ book.Title }}</td>
+              <td>{{ book.Author }}</td>
+              <td>{{ book.Price }}</td>
+              <td>
+                  <button class="btn btn-warning " id="bt" (click)="onButtonClickEdit(book)">Edit</button> 
+                  <button class="btn btn-danger " id="bt"(click)="onButtonClick(book)">Delete</button> 
+              </td>
+          </tr>
+      </tbody>
+  </table>
+
+  <br>
+  <hr><br>
+
+
+
+  <form #loginForm="ngForm" (submit)="onSubmit(loginForm.value)">
+              
+    <div class="form-group">
+      <label for="Title">Title</label>
+      <input
+        type="text"
+        id="Title"
+        #Title="ngModel"
+        name="Title"
+        class="form-control"
+        ngModel
+      />
+
+    </div>
+    <div class="form-group">
+        <label for="Author">Author</label>
+        <input
+          type="text"
+          id="Author"
+          #Author="ngModel"
+          name="Author"
+          class="form-control"
+          ngModel
+        />
+  
+      </div>    <div class="form-group">
+        <label for="Price">Price</label>
+        <input
+          type="text"
+          id="Price"
+          #Price="ngModel"
+          name="Price"
+          class="form-control"
+          ngModel
+        />
+  
+      </div>
+
+
+    
+    <input
+      type="submit"
+      value="Add Book"
+      class="btn btn-info"
+    />
+  </form>
+
+  
+  
+  
+  </div>
+  
